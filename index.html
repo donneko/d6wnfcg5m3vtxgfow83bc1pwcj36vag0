@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./src/script/first-view-event/loading-event/src/css/loading-event.css">
     <link rel="stylesheet" href="./src/script/first-view-event/opening-event/src/css/opening-event.css">
     <link rel="stylesheet" href="./src/style/header.css">
-    <link rel="stylesheet" href="./src/style/page-index.css">
+    <link rel="stylesheet" href="./src/style/index.css">
 
     <script type="module" src="./src/script/first-view-event/main.js" defer></script>
 </head>
@@ -39,44 +39,41 @@
     </div>
     <header class="header-body">
         <div class="header-top-area">
-            <a class="header-top-logo">
+            <a href="" class="header-top-logo">
                 <img class="header-top-logo-img" src="./src/media/img/logo.webp">
             </a>
-            <nav>
-                <a>Top</a>
-                <a>Process</a>
-                <a>Software</a>
-                <a>Credits</a>
+            <nav class="header-menu-pc-links">
+                <a href="">Top</a>
+                <a href="">Process</a>
+                <a href="">Software</a>
+                <a href="">Credits</a>
             </nav>
-            <button>
+            <button class="header-menu-phone-area-open-button">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-        <div class="header-menu-area">
-            <div class="header-menu-logo">
-                <span>MENU</span>
-                <img src="./src/media/img/logo.webp">
-            </div>
-            <nav class="header-menu-links">
-                <a>Top</a>
-                <a>Process</a>
-                <a>Software</a>
-                <a>Credits</a>
+        <div class="header-menu-phone-area isactive">
+            <nav class="header-menu-phone-links">
+                <a href="">Top</a>
+                <a href="">Process</a>
+                <a href="">Software</a>
+                <a href="">Credits</a>
             </nav>
         </div>
     </header>
     <main>
-        <!-- <section>
-            <div>
+        <section class="home">
+            <div class="home-video">
                 <video src="./src/media/vid/opening.mp4"></video>
-                <img src="/src/media/img/logo.webp">
             </div>
-            <div>
+            <div class="home-title">
+            </div>
+            <div class="home-scroll">
                 <span>Scroll</span>
             </div>
-        </section> -->
+        </section>
     </main>
 
 </body>
