@@ -1,0 +1,105 @@
+.loading{
+    /* .loading */
+        /* background */
+        --loading-background-color: #000000;
+        /* color */
+        --loading-color: #ffffff;
+        /* z-index */
+        --loading-zindex: 9999;
+        /* color */
+        --loading-color: #ffffff;
+    /* .loading-title-text */
+        /* font-size */
+        --title-text-fontsize: 3em;
+    /* .loading-title */
+        /* width */
+        --loading-title-width: calc(var(--title-text-fontsize) * 6);
+    /* .loading-percent */
+        /* gap */
+        --percent-gap: 10px;
+    /* .loading-percent-linearea-line */
+        /* height */
+        --parcent-line-height :0.3em;
+        /* border-radius */
+        --parcent-line-border-radius :calc(var(--parcent-line-height) / 2);
+    /* .loading-percent-text */
+        /* font-size */
+        --parcent-text-fontsize :0.7em;
+}
+.loading * {
+    margin:0;
+}
+.loading{
+    font-size: clamp(14px,2dvw,40px);
+    width: 100dvw;
+    height: 100dvh;
+    position: absolute;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    z-index: var(--loading-zindex);
+    background: var(--loading-background-color);
+    color: var(--loading-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading-box{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.loading-title{
+    display:block;
+    position: relative;
+    width: var(--loading-title-width)
+}
+.loading-title-text{
+    position: absolute;
+    font-size: var(--title-text-fontsize);
+    white-space: nowrap;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.loading-percent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--percent-gap);
+}
+.loading-percent-linearea{
+    width: 100%;
+    position: relative;
+}
+.loading-percent-linearea::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    border-radius: var(--parcent-line-border-radius);
+    background: #282828;
+    z-index: 1;
+}
+.loading-percent-linearea-line{
+    display: block;
+    position: relative;
+    background: #ffffff;
+    width: 0%;
+    max-width: 100%;
+    min-width: 0%;
+    height: var(--parcent-line-height);
+    border-radius: var(--parcent-line-border-radius);
+    transition: all 0.3s ease;
+    z-index: 2;
+
+}
+.loading-percent-text{
+    min-width: 4em;
+    display: flex;
+    align-items: center;
+    font-size: var(--parcent-text-fontsize);
+}

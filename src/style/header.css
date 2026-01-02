@@ -1,0 +1,39 @@
+.header-body{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100dvw;
+    height: 5em;
+    background: linear-gradient(#000 0%,#ffffff00 100%);
+}
+.header-top-area{
+    height: 100%;
+    width: 100%;
+}
+.header-top-logo{
+    height: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.header-top-logo-img{
+    height: 100%;
+    width: 100%;
+}
+.header-top-open-menu-button{
+    display: none;
+}
+.header-menu-area{
+    display: none;
+
+}
+.header-menu-logo{
+
+}
+.header-menu-links{
+
+}
