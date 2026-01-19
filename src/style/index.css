@@ -1,0 +1,172 @@
+body{
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.home{
+    position: relative;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 2;
+    
+}
+.home-video-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.home-video-box::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #1312185e;
+    z-index: 1;
+}
+.home-video-box::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#000 0%,transparent 40%);
+    background-size: 4px 4px;
+    background-repeat: repeat;
+    z-index: 1;
+}
+.home-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+
+.home-title{
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    transform: translateY(-50%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+.home-title-pley{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+.home-title-pley-button-box{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 0.2em;
+}
+.home-title-pley-button-icon{
+    height: 3em;
+    aspect-ratio: 1/1;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: initial;
+}
+.home-title-pley-button-icon-img{
+    width: inherit;
+    height: inherit;
+    background: initial;
+}
+.home-title-pley-button-text{
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: initial;
+    color: #fff;
+    text-decoration:underline;
+    font-size: 0.7em;
+    font-family: inherit;
+}
+.home-title-pley-bar-box{
+    width: 100%;
+    height: 0.1em;
+    border-radius: 0.05em;
+    background-color: #2f2f2f;
+}
+.home-title-pley-bar{
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #fff;
+}
+.home-title-box{
+    display: flex;
+    flex-direction: column;
+}
+.home-title-main-title{
+    margin: 0;
+}
+.home-title-sub-title{
+    margin: 0;
+}
+.home-scroll{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1em;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform-origin: center right;
+    transform:rotate(-90deg) translateY(-100%);
+    color: #fff;
+    z-index: 2;
+
+}
+.home-scroll-text{
+    transform:rotate(180deg);
+
+}
+.home-scroll-anime-box{
+    position: relative;
+    display: block;
+    width: 50vw;
+    height: 0.1em;
+    background-color: #484848;
+    overflow: hidden;
+    transform: rotate(180deg);
+    border-radius: 0.05em;
+}
+.home-scroll-anime{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0.1em;
+    top: 50%;
+    left: 50%;
+    border-radius: inherit;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    animation: scroll 1s linear infinite;
+}
+@keyframes scroll {
+    from{  transform: translate(-150%,-50%); }
+    to{  transform: translate(100%,-50%); }
+}
+.about{
+    height: 10000px;
+    background-color: #2f2f2f;
+}
