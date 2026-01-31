@@ -15,8 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="normal-font-style">
     <div>
         <!-- <div class="loading js-loading-event">
             <div class="loading-box">
@@ -46,7 +47,7 @@
 
     <header class="header-body">
         <div class="header-top-area">
-            <nav class="header-menu-pc-links">
+            <nav class="header-menu-pc-links accent-font-style">
                 <a href="">Top</a>
                 <a href="">Process</a>
                 <a href="">Software</a>
@@ -59,7 +60,7 @@
             </button>
         </div>
         <div class="header-menu-phone-area isactive">
-            <nav class="header-menu-phone-links">
+            <nav class="header-menu-phone-links accent-font-style">
                 <a href="">Top</a>
                 <a href="">Process</a>
                 <a href="">Software</a>
@@ -79,18 +80,18 @@
                         <button class="home-title-pley-button-icon">
                             <img class="home-title-pley-button-icon-img" src="./src/media/svg/ke.svg">
                         </button>
-                        <button class="home-title-pley-button-text">PLAY</button>
+                        <button class="home-title-pley-button-text accent-font-style">PLAY</button>
                     </div>
                     <div class="home-title-pley-bar-box">
                         <span class="home-title-pley-bar"></span>
                     </div>
                 </div>
-                <hgroup class="home-title-box">
+                <hgroup class="home-title-box accent-font-style">
                     <h1 class="home-title-main-title">RΛLINE</h1>
                     <p class="home-title-sub-title">3D Visual Portfolio</p>
                 </hgroup>
             </div>
-            <div class="home-scroll">
+            <div class="home-scroll accent-font-style">
                 <span class="home-scroll-text">Scroll</span>
                 <span class="home-scroll-anime-box">
                     <span class="home-scroll-anime"></span>
@@ -104,7 +105,7 @@
                     </div>
                 </div>
                 <div class="about-title">
-                    <div class="about-title-box">
+                    <div class="about-title-box accent-font-style">
                         <p class="about-title-top">3D Motion</p>
                         <p class="about-title-bottom">Visual Design.</p>
                     </div>
@@ -121,24 +122,27 @@
                 </article>
         </section>
         <section class="process">
-            <h2 class="process-title">Process</h2>
-            <nav>
-                <button><ruby>絵<rt>え</rt></ruby>コンテ</button>
-                <button>3D</button>
-                <button><ruby>音響<rt>おんきょう</rt></ruby></button>
-                <button><ruby>編集<rt>へんしゅう</rt></ruby></button>
-            </nav>
-            <article>
-                <h3></h3>
-                <p></p>
-                <img class="process-back-img" src="./src/media/img/Siteabout.jpg">
-            </article>
-            <nav>
-                <button>前の記事に移動</button>
-                <button>次の記事に移動</button>
-                <progress  value="3" max="5"></progress>
-
-            </nav>
+            <div class="process-box">
+                <div class="process-area">
+                    <h2 class="process-title process-grid-item">Process</h2>
+                    <nav class="process-filter process-grid-item">
+                        <button class="process-filter-button"><ruby>絵<rt>え</rt></ruby>コンテ</button>
+                        <button class="process-filter-button">3D</button>
+                        <button class="process-filter-button"><ruby>音響<rt>おんきょう</rt></ruby></button>
+                        <button class="process-filter-button"><ruby>編集<rt>へんしゅう</rt></ruby></button>
+                    </nav>
+                    <article class="process-contents process-grid-item">
+                        <h3  class="process-contents-title">Modeling</h3>
+                        <p  class="process-contents-text">モデリングとは、物の形や構造を考えながら、<wbr>三次元の立体として設計・構築することです。<wbr>写真や参考資料をもとに、<wbr>線や面を少しずつ調整しながら形状を整えていきます。<wbr>わずかな曲線や角度の違いでも全体の印象が大きく変わるため、<wbr>一度で形が決まることはほとんどありません。<wbr>確認と修正を何度も繰り返しながら進めるため、<wbr>多くの時間を要する工程であり、<wbr>完成度を左右する重要な作業です。</p>
+                        <!-- <img class="process-back-img" src="./src/media/img/Siteabout.jpg"> -->
+                    </article>
+                    <nav class="process-move">
+                        <button class="process-move-back process-grid-item">前の記事に移動</button>
+                        <progress class="process-move-progress process-grid-item" value="3" max="5"></progress>
+                        <button class="process-move-next process-grid-item">次の記事に移動</button>
+                    </nav>
+                </div>
+            </div>
         </section>
     </main>
 </body>
