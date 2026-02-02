@@ -8,9 +8,10 @@ body{
     font-style: normal;
 }
 .normal-font-style{
-    font-family: "BIZ UDPGothic", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .home{
     position: relative;
@@ -287,47 +288,65 @@ body{
 .process-box{
     position: sticky;
     box-sizing: border-box;
-    border: #ff0000 2px solid;
     top: 0;
     width: 100%;
     height: 100dvh;
-    background: #4343437a;
+    background: #000000;
+    display: grid;
+    padding: 1em 0;
+    grid-template-columns: 2em repeat(3,1fr) 2em;
+    grid-template-rows:5em 2em 1fr 1fr 1fr 2em 5em;
+    row-gap: 0;
+    column-gap:0;
+    grid-template-areas:
+    ". title . . ."
+    "area area area area area"
+    "area area area area area"
+    "area area area area area"
+    "area area area area area"
+    "area area area area area"
+    ". . . . .";
 }
 .process-area{
+    padding: 0.5em 0;
     position: relative;
+    z-index: 5;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     display: grid;
-    padding: 1em 1em;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows:2em 2em 1fr 1fr 1fr 2em 2em;
+    grid-area: area;
+    grid-template-columns: subgrid;
+    grid-template-rows:subgrid;
     row-gap: 0;
     column-gap:0;
     grid-template-areas:
-    "title . ."
-    ". filter ."
-    ". . ."
-    "contents . ."
-    ". . ."
-    "move move move"
-    ". . .";
+    ". . filter . ."
+    ". . . . ."
+    ". contents . . ."
+    ". . . . ."
+    ". move move move ."
 }
-.process-grid-item{
-    border: #fff 1px solid;
-}
+/* .process-grid-item{
+    
+} */
 .process-title{
+    position: relative;
+    z-index: 6;
     display: flex;
-    align-items: end;
+    align-items: center;
     margin: 0;
     grid-area: title;
     color: #fff;
-    font-size: 0.9em;
+    font-size: 1.2em;
 }
 .process-filter{
+    position: relative;
+    z-index: 6;
     grid-area: filter;
     display: flex;
-    justify-content: space-around;
+    gap:1em;
+    justify-content:center;
 }
 .process-filter-button{
     appearance: none;
@@ -335,39 +354,120 @@ body{
     background: none;
     color: #fff;
 }
+.process-filter-button .is-active{
+    text-decoration: underline;
+}
 .process-contents{
     grid-area: contents;
     color: #fff;
-
+    display: flex;
+    flex-direction: column;
+    gap:1em ;
+    height: 30dvh;
 }
 .process-contents-title{
+    position: relative;
+    z-index: 6;
     text-decoration: underline;
     font-size: 1.5em;
     margin: 0;
-
 }
 .process-contents-text{
+    position: relative;
+    z-index: 6;
     font-size: 1.2em;
-    overflow: hidden;
+    overflow: scroll;
     margin: 0;
 }
 .process-back-img{
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit:fill;
 }
 .process-move{
+    position: relative;
+    z-index: 6;
     grid-area: move;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1em;
+    color: #fff;
 }
-.process-move-back{
-    display: block;
+/* .process-move-back{
 
 }
 .process-move-next{
-    display: block;
+
+} */
+.process-move-progress{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    height: 0.2em;
+}
+.process-move-button{
+    display: inline-block;
+    width: 10em;
+    padding: 0;
+    appearance: none;
+    margin: 0;
+    border: 0;
+    background-color: #00000000;
+    color: inherit;
 
 }
-.process-move-progress{
+.process-move-progress-bar{
+    position: absolute;
     display: block;
     width: 100%;
+    height: 0.2em;
+    width: 100%;
+    height: 0.2em;
+    background: #fff;
+    border-radius: 100%;
+
+}
+.process-move-progress-button{
+    position: relative;
+    height: 1em;
+    appearance: none;
+    border-radius: 100%;
+    border: none;
+    aspect-ratio: 1/1;
+    background: #fff;
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+.process-move-progress-button.is-active{
+    transform: scale(1.1);
+}
+.process-move-progress-button::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background: #00000000;
+    border-radius:50%;
+    opacity: 0;
+    border: #fff 1.5px solid;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 1s ease,opacity 1s ease;
+}
+.process-move-progress-button.is-active::before{
+    transform: translate(-50%,-50%) scale(1.4);
+    opacity: 1;
+
 }
