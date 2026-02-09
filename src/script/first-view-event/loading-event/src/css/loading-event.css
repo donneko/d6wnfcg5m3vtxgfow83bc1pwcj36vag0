@@ -43,6 +43,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10001;
+    overflow: hidden;
+
 }
 .loading-box{
     display: inline-flex;

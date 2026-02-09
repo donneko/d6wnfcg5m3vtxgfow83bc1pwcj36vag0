@@ -1,5 +1,4 @@
 .opening{
-    position: relative;
     font-size: 14px;
     width: 100dvw;
     height: 100dvh;
@@ -9,6 +8,9 @@
     justify-content: center;
     align-items: center;
     transform: translateY(0%);
+    z-index: 10000;
+    overflow: hidden;
+
 }
 .opening-start-event:not(.is-active){
     display: none;
