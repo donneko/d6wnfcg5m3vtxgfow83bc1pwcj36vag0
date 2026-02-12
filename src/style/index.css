@@ -11,7 +11,7 @@ body{
 }
 .main-section-margin{
     margin-top: 10rem;
-    margin-bottom: 5rem;    
+    margin-bottom: 5rem;
 }
 .accent-font-style{
     font-family: "Kaisei HarunoUmi", serif;
@@ -24,12 +24,90 @@ body{
     font-weight: 400;
     font-style: normal;
 }
+.video-box.is-active{
+    display: flex;
+
+}
+.video-box{
+    position: fixed;
+    z-index: 999;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #070707;
+}
+.video-video{
+    min-height: 100%;
+    width: 100%;
+}
+.video-controller-top-box{
+    top:0;
+    position: absolute;
+    z-index: 1000;
+    box-sizing: border-box;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-controller-top{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 1em;
+    transform: translateY(0%);
+    transition:transform 250ms ease-in-out ;
+}
+.video-controller-back{
+    position: relative;
+    border: none;
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    z-index: 1001;
+    width: 2em;
+    aspect-ratio: 1/1;
+    border-radius: 10%;
+    background-color: #ffffff80;
+    cursor: pointer;
+}
+.video-controller-back::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    width: 10%;
+    height: 90%;
+    border-radius: 1em;
+    background-color: #000000dd;
+}
+.video-controller-back::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    width: 10%;
+    height: 90%;
+    border-radius: 1em;
+    background-color: #000000dd;
+}
 .home{
     position: relative;
     width: 100dvw;
     height: 100dvh;
     z-index: 3;
-    
 }
 .home-video-box{
     position: relative;
@@ -94,18 +172,18 @@ body{
     flex-direction: column;
     z-index: 2;
 }
-.home-title-pley{
+.home-title-play{
     display: flex;
     flex-direction: column;
     gap: 0.2em;
 }
-.home-title-pley-button-box{
+.home-title-play-button-box{
     display: flex;
     flex-direction: row;
     align-items: end;
     gap: 0.2em;
 }
-.home-title-pley-button-icon{
+.home-title-play-button-icon{
     height: 3em;
     aspect-ratio: 1/1;
     padding: 0;
@@ -113,12 +191,13 @@ body{
     border: none;
     background: initial;
 }
-.home-title-pley-button-icon-img{
+.home-title-play-button-icon-img{
     width: inherit;
     height: inherit;
     background: initial;
+    cursor: pointer;
 }
-.home-title-pley-button-text{
+.home-title-play-button-text{
     padding: 0;
     margin: 0;
     border: none;
@@ -127,19 +206,21 @@ body{
     text-decoration:underline;
     font-size: 0.7em;
     font-family: inherit;
+    cursor: pointer;
 }
-.home-title-pley-bar-box{
+.home-title-play-bar-box{
     width: 100%;
     height: 0.1em;
     border-radius: 0.05em;
     background-color: #2f2f2f;
 }
-.home-title-pley-bar{
+.home-title-play-bar{
     display: block;
     width: 50%;
     height: 100%;
     border-radius: inherit;
     background-color: #fff;
+    transition:width 250ms linear ;
 }
 .home-title-box{
     display: flex;
@@ -342,7 +423,7 @@ body{
     ". move move move ."
 }
 /* .process-grid-item{
-    
+
 } */
 .process-title{
     position: relative;

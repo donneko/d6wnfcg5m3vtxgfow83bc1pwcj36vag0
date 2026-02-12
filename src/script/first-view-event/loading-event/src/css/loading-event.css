@@ -33,7 +33,7 @@
     font-size: clamp(14px,2dvw,40px);
     width: 100dvw;
     height: 100dvh;
-    position: absolute;
+    position: fixed;
     opacity: 1;
     left: 0;
     top: 0;

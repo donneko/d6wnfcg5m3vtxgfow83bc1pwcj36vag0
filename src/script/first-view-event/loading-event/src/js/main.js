@@ -106,13 +106,13 @@ export class LoadingEventController{
         });
     };
     MyRemove(){
+            this.#emitEnd();
             setTimeout(()=>{
                 this.EL_LOADING_AREA.style.transition = "opacity 1s ease-out";
                 this.EL_LOADING_AREA.style.opacity = "0";
                 this.EL_LOADING_AREA.style.pointerEvents = "none";
                 this.EL_LOADING_AREA.addEventListener("transitionend",()=>{
                     this.EL_LOADING_AREA.remove();
-                    this.#emitEnd();
                 })
             },500)
     }

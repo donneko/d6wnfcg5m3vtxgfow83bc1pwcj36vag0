@@ -31,6 +31,7 @@
                 </div>
             </div>
         </div>
+
         <div class="opening js-opening-body">
             <div class="opening-start-event is-active js-opening-start-body">
                 <p class="opening-start-event-text">FIRE</p>
@@ -38,9 +39,18 @@
                 <p class="opening-start-event-info">Push to space or button</p>
             </div>
             <div class="opening-video-event js-opening-video-body">
-                <video class="opening-video-event-video js-opening-video" muted src="./src/media/vid/opening.mp4"></video>
+                <video class="opening-video-event-video js-opening-video" muted src="./src/media/vid/opening.webm"></video>
             </div>
             <button class="opening-event-skip" id="js-opening-video-skip-button">skip</button>
+        </div>
+
+        <div class="video-box js-video-play-video-box">
+            <div class="video-controller-top-box">
+                <div class="video-controller-top">
+                    <button class="video-controller-back js-video-button-back" aria-label="戻る"></button>
+                </div>
+            </div>
+            <video class="video-video js-video-play-video" muted src="./src/media/vid/opening.webm"></video>
         </div>
     <header class="header-body">
         <div class="header-top-area">
@@ -68,19 +78,19 @@
     <main>
         <section class="home">
             <div class="home-video-box">
-                <video class="home-video" src="./src/media/vid/home.mp4" autoplay loop muted></video>
+                <video class="home-video js-video-sample" src="./src/media/vid/home.webm" autoplay loop muted></video>
             </div>
             <img class="home-logo-img" src="./src/media/img/logo.webp">
             <div class="home-title">
-                <div class="home-title-pley">
-                    <div class="home-title-pley-button-box">
-                        <button class="home-title-pley-button-icon">
-                            <img class="home-title-pley-button-icon-img" src="./src/media/svg/ke.svg">
+                <div class="home-title-play">
+                    <div class="home-title-play-button-box">
+                        <button class="home-title-play-button-icon js-video-play-button-img">
+                            <img class="home-title-play-button-icon-img" src="./src/media/svg/ke.svg">
                         </button>
-                        <button class="home-title-pley-button-text accent-font-style">PLAY</button>
+                        <button class="home-title-play-button-text accent-font-style js-video-play-button-text">PLAY</button>
                     </div>
-                    <div class="home-title-pley-bar-box">
-                        <span class="home-title-pley-bar"></span>
+                    <div class="home-title-play-bar-box">
+                        <span class="home-title-play-bar js-video-play-ber"></span>
                     </div>
                 </div>
                 <hgroup class="home-title-box accent-font-style">
@@ -206,5 +216,7 @@
             </div>
         </details>
     </footer>
+
+    <script type="module" src="./src/script/top-video-controller/main.js" defer></script>
 </body>
 </html>

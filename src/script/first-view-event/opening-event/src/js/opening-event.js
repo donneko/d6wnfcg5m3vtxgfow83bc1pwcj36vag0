@@ -18,12 +18,24 @@ export class PpeningStart{
     constructor(){
         this.isVideoPley= false;
         this.FN_LIST = [];
-
+    }
+    init(){
         this.#initGetElement();
         this.#initEvent();
         this.#initDisplay();
     }
+    EndRemoveDisplay(){
+        this.#initGetElement();
+        this.#initDisplay();
 
+        this.EL_OPENING_BODY.style.transition = "transform 0.5s ease,opacity 0.5s ease"
+        this.EL_OPENING_BODY.style.transform = "translateY(-100%)"
+        this.EL_OPENING_BODY.style.opacity = "0"
+        this.#emitEnd()
+        this.EL_OPENING_BODY.addEventListener("transitionend",()=>{
+            this.EL_OPENING_BODY.remove();
+        }, { once: true })
+    }
     onEnd(fn){
         if(!fn) return ;
         this.FN_LIST.push(fn);
@@ -83,9 +95,9 @@ export class PpeningStart{
     #removeDisplay(){
         this.EL_OPENING_BODY.style.transition = "transform 0.5s ease"
         this.EL_OPENING_BODY.style.transform = "translateY(-100%)"
+        this.#emitEnd()
         this.EL_OPENING_BODY.addEventListener("transitionend",()=>{
             this.EL_OPENING_BODY.remove();
-            this.#emitEnd();
         }, { once: true })
     }
 

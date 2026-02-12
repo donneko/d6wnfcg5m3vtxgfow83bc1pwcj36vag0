@@ -2,7 +2,7 @@
     font-size: 14px;
     width: 100dvw;
     height: 100dvh;
-    position: absolute;
+    position: fixed;
     background:#000000;
     display: flex;
     justify-content: center;
