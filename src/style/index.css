@@ -1,3 +1,8 @@
+
+html{
+    scroll-behavior: smooth;
+
+}
 body{
     background: #000;
     min-width: 100dvw;
@@ -689,13 +694,12 @@ body{
     animation-delay:calc(sibling-index() * 0.2s) ;
 
 }
+
 .credit-about-list-left{
     opacity: 0;
     grid-area: left;
     text-align: right;
     font-size: 1.5em;
-    animation: start-left 1.2s ease-in-out 1 forwards;
-    animation-delay: inherit;
 }
 .credit-about-list-center{
     grid-area: center;
@@ -708,6 +712,12 @@ body{
     grid-area: right;
     text-align: left;
     font-size: 1.5em;
+}
+.credit-about-list.is-active .credit-about-list-left{
+    animation: start-left 1.2s ease-in-out 1 forwards;
+    animation-delay: inherit;
+}
+.credit-about-list.is-active .credit-about-list-right{
     animation: start-right 1.2s ease-in-out 1 forwards;
     animation-delay: inherit;
 }

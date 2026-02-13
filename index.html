@@ -55,10 +55,10 @@
     <header class="header-body">
         <div class="header-top-area">
             <nav class="header-menu-pc-links accent-font-style">
-                <a href="">Top</a>
-                <a href="">Process</a>
-                <a href="">Software</a>
-                <a href="">Credits</a>
+                <a href="#top">Top</a>
+                <a href="#process">Process</a>
+                <a href="#software">Software</a>
+                <a href="#credits">Credits</a>
             </nav>
             <button class="header-menu-phone-area-open-button">
                 <span></span>
@@ -68,15 +68,15 @@
         </div>
         <div class="header-menu-phone-area isactive">
             <nav class="header-menu-phone-links accent-font-style">
-                <a href="">Top</a>
-                <a href="">Process</a>
-                <a href="">Software</a>
-                <a href="">Credits</a>
+                <a href="#top">Top</a>
+                <a href="#process">Process</a>
+                <a href="#software">Software</a>
+                <a href="#credits">Credits</a>
             </nav>
         </div>
     </header>
     <main>
-        <section class="home">
+        <section class="home" id="top">
             <div class="home-video-box">
                 <video class="home-video js-video-sample" src="./src/media/vid/home.webm" autoplay loop muted></video>
             </div>
@@ -128,7 +128,7 @@
                     <p class="about-content-highlight"><ruby>本作品<rt>ほんさくひん</rt></ruby>は、その<ruby>過程自体<rt>かていじいたい</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>めて、<ruby>昨年<rt>きょねん</rt></ruby>からの<ruby>自分<rt>じぶん</rt></ruby>たちなりの<ruby>成長<rt>せいちょう</rt></ruby>の<ruby>証明<rt>しょうめい</rt></ruby>でもあります。</p>
                 </article>
         </section>
-        <section class="process main-section-margin">
+        <section class="process main-section-margin" id="process">
             <div class="process-box">
                 <h2 class="process-title process-grid-item">Process</h2>
                 <div class="process-area">
@@ -159,8 +159,8 @@
                 </div>
             </div>
         </section>
-        <section class="softs main-section-margin">
-            <h2 class="softs-title">software</h2>
+        <section class="softs main-section-margin" id="software">
+            <h2 class="softs-title">Software</h2>
             <div class="softs-about">
                 <div class="softs-about-body">
                     <h3 class="softs-about-title">3D/Animation</h3>
@@ -184,10 +184,10 @@
                 </div>
             </div>
         </section>
-        <section class="credit main-section-margin">
-            <h2 class="credit-title">credit</h2>
+        <section class="credit main-section-margin" id="credits">
+            <h2 class="credit-title">credits</h2>
             <div class="credit-about-body">
-                <ul class="credit-about-list">
+                <ul class="credit-about-list js-credit-box">
                     <li class="credit-about-list-box"><span class="credit-about-list-left">Modeling</span><span class="credit-about-list-center">:</span><span class="credit-about-list-right">＃＃ ＃</span></li>
                     <li class="credit-about-list-box"><span class="credit-about-list-left">Modeling</span><span class="credit-about-list-center">:</span><span class="credit-about-list-right">＃＃ ＃</span></li>
                     <li class="credit-about-list-box"><span class="credit-about-list-left">Modeling</span><span class="credit-about-list-center">:</span><span class="credit-about-list-right">＃＃ ＃</span></li>
@@ -218,5 +218,6 @@
     </footer>
 
     <script type="module" src="./src/script/top-video-controller/main.js" defer></script>
+    <script type="module" src="./src/script//credit-start/main.js" defer></script>
 </body>
 </html>
