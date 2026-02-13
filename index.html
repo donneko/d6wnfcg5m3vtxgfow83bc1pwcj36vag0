@@ -133,28 +133,30 @@
                 <h2 class="process-title process-grid-item">Process</h2>
                 <div class="process-area">
                     <div class="process-back-effect"></div>
-                    <img class="process-back-img" src="./src/media/img/Siteabout.jpg">
-                    <nav class="process-filter process-grid-item">
+                    <img class="process-back-img js-background-media" src="./src/media/img/Siteabout.jpg">
+                    <nav class="process-filter process-grid-item js-tag-box-buttons">
                         <button class="process-filter-button is-active"><ruby>絵<rt>え</rt></ruby>コンテ</button>
                         <button class="process-filter-button accent-font-style">3D</button>
                         <button class="process-filter-button"><ruby>音響<rt>おんきょう</rt></ruby></button>
                         <button class="process-filter-button"><ruby>編集<rt>へんしゅう</rt></ruby></button>
                     </nav>
                     <article class="process-contents process-grid-item">
-                        <h3 class="process-contents-title accent-font-style">Modeling</h3>
-                        <p class="process-contents-text">モデリングとは、物の形や構造を考えながら、<wbr>3次元の立体として設計・構築することです。<wbr>写真や参考資料をもとに、<wbr>線や面を少しずつ調整しながら形状を整えていきます。<wbr>わずかな曲線や角度の違いでも全体の印象が大きく変わるため、<wbr>一度で形が決まることはほとんどありません。<wbr>確認と修正を何度も繰り返しながら進めるため、<wbr>多くの時間を要する工程であり、<wbr>完成度を左右する重要な作業です。</p>
+                        <h3 class="process-contents-title accent-font-style js-content-title">Modeling</h3>
+                        <p class="process-contents-text js-content-text">モデリングとは、物の形や構造を考えながら、<wbr>3次元の立体として設計・構築することです。<wbr>写真や参考資料をもとに、<wbr>線や面を少しずつ調整しながら形状を整えていきます。<wbr>わずかな曲線や角度の違いでも全体の印象が大きく変わるため、<wbr>一度で形が決まることはほとんどありません。<wbr>確認と修正を何度も繰り返しながら進めるため、<wbr>多くの時間を要する工程であり、<wbr>完成度を左右する重要な作業です。</p>
                     </article>
                     <nav class="process-move">
-                        <button class="process-move-back process-move-button process-grid-item" aria-label="前の記事に移動"></button>
+                        <button class="process-move-back process-move-button process-grid-item js-control-back-button" aria-label="前の記事に移動"></button>
                         <div class="process-move-progress process-grid-item">
                             <div class="process-move-progress-bar" ></div>
-                            <button class="process-move-progress-button is-active"></button>
-                            <button class="process-move-progress-button"></button>
-                            <button class="process-move-progress-button"></button>
-                            <button class="process-move-progress-button"></button>
-                            <button class="process-move-progress-button"></button>
+                            <div class="js-control-each-button">
+                                <button class="process-move-progress-button is-active"></button>
+                                <button class="process-move-progress-button"></button>
+                                <button class="process-move-progress-button"></button>
+                                <button class="process-move-progress-button"></button>
+                                <button class="process-move-progress-button"></button>
+                            </div>
                         </div>
-                        <button class="process-move-next process-move-button process-grid-item" aria-label="次の記事に移動"></button>
+                        <button class="process-move-next process-move-button process-grid-item js-control-next-button" aria-label="次の記事に移動"></button>
                     </nav>
                 </div>
             </div>
@@ -218,6 +220,7 @@
     </footer>
 
     <script type="module" src="./src/script/top-video-controller/main.js" defer></script>
-    <script type="module" src="./src/script//credit-start/main.js" defer></script>
+    <script type="module" src="./src/script/process-controller/main.js" defer></script>
+    <script type="module" src="./src/script/credit-start/main.js" defer></script>
 </body>
 </html>

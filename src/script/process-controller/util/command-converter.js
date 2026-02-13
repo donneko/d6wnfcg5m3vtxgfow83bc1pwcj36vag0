@@ -1,4 +1,5 @@
-function commandConverter(input){
+
+export function commandConverter(input){
 
     const META_TAG = Object.freeze({
         open: "(",
@@ -30,5 +31,3 @@ function commandConverter(input){
 
     return {cmd:CMD_TEXT,arg:ARG_TEXT,}
 }
-
-console.log(commandConverter("img(./src/aaa/img.jng)"))

@@ -1,4 +1,5 @@
 import {STORY_BOARD_DATA} from "./board.js";
+import {STORY_3D_DATA} from "./3d.js";
 
 
 export const ARTICLE_DATA = Object.freeze([
