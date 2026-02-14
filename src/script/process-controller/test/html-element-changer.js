@@ -1,7 +1,7 @@
 import {getHtmlElementFromDom} from"../../util/get-dom/get-html-element-from-dom.js";
 import {xssMeasures} from"./xss-measures.js";
 import {createElement} from"./create-element.js";
-class HtmlElementChanger{
+class HtmlElementController{
     constructor(cssSelector){
         this.#initElement(cssSelector);
     }
